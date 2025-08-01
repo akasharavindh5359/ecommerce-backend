@@ -1,6 +1,7 @@
 package com.ecommerce.repo;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
@@ -28,6 +29,9 @@ public interface ProductRepo extends JpaRepository<NewProductEntity, Long>{
 
 	@Query(value = "SELECT * FROM ecommerceo2.image_data;", nativeQuery = true)
 	ArrayList<ImageEntity> getallImgData();
+
+	@Query(value = "SELECT * FROM ecommerceo2.products;", nativeQuery = true)
+	List<NewProductEntity> getAllProductData();
 
 	
 	

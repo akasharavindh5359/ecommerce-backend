@@ -217,7 +217,7 @@ public class ProductServiceImpl implements ProductService {
 		List<NewProductDto> ProductList = new ArrayList<>();
 		try {
 			this.logger.info("<-------RestAPIServiceImpl------getAllData()-------Start--->");
-			List<NewProductEntity> ProductEntity = productRepo.findAll();
+			List<NewProductEntity> ProductEntity = productRepo.getAllProductData();
 			Iterator<NewProductEntity> iteratorProd = ProductEntity.iterator();
 			while(iteratorProd.hasNext()) {
 				NewProductEntity proEnity = iteratorProd.next();
